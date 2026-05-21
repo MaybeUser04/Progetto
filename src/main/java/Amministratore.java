@@ -6,7 +6,16 @@ public class Amministratore extends Utente {
 
     @Override
     public int Accedi(String nome, String cognome, String email) {
-        // Implementazione specifica per Amministratore
-        return 0;
+
+        int res;
+        if(this.getNome().equals(nome) && this.getCognome().equals(cognome) && this.getEmail().equals(email)){
+            res=0;
+        }else{
+            res=-1;
+        }
+        return res;
     }
+
+
+
 }

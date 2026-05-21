@@ -1,9 +1,13 @@
+import java.util.ArrayList;
+
 public class Ristorante {
     String nome;
     StringBuilder descrizione;
     Indirizzo indirizzoRistorante;
-    Data[] orariApertura;
-    Piatto[] Menu;
+    ArrayList<Data> orariApertura;
+    ArrayList<Piatto> Menu;
+
+    ArrayList<Ordine> ordiniRicevuti;
 
     Ristoratore ristoratoreResponsabile;
 
@@ -11,7 +15,26 @@ public class Ristorante {
         this.nome=nome;
         this.descrizione= new StringBuilder();
         this.indirizzoRistorante= new Indirizzo(via,civico,citta,cap);
-        //Forse è meglio fare contenimento lasco//this.orariApertura[]=new Data(giorno,inizioServizio,fineServizio) ;
+        this.orariApertura=new ArrayList<>();
+        this.Menu=new ArrayList<>();
+    }
+
+    void addOrariApertura(Data d){
+        orariApertura.add(d);
+    }
+    void removeOrariApertura(Data d){
+        orariApertura.remove(d);
+    }
+
+    void addPiatto(Piatto p){
+        Menu.add(p);
+    }
+    void removePiatto(Piatto p){
+        Menu.remove(p);
+    }
+
+    void addOrdine_Ricevuti(Ordine o){
+        ordiniRicevuti.add(o);
     }
 
 }

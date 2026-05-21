@@ -1,6 +1,8 @@
+import java.util.ArrayList;
+
 public class Ristoratore extends Utente {
 
-    Ristorante[] ristorantiGestiti;
+    ArrayList<Ristorante> ristorantiGestiti;
 
     public Ristoratore(String nome, String cognome, String email, String ruolo,String via, int civico, String citta, int cap) {
         super(nome, cognome, email, ruolo,via,civico,citta,cap);
@@ -8,10 +10,21 @@ public class Ristoratore extends Utente {
 
     @Override
     public int Accedi(String nome, String cognome, String email) {
-        // Implementazione specifica per Ristoratore
-        return 0;
-    }
-    public void addRistorante(){
+
+        int res;
+        if(this.getNome().equals(nome) && this.getCognome().equals(cognome) && this.getEmail().equals(email)){
+            res=0;
+        }else{
+            res=-1;
+        }
+        return res;
 
     }
+    public void addRistorante(Ristorante r){
+        ristorantiGestiti.add(r);
+    }
+    public void removeRistorante(Ristorante r){
+        ristorantiGestiti.remove(r);
+    }
+
 }

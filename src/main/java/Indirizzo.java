@@ -18,12 +18,8 @@ public class Indirizzo {
     public int getCivico() {
         return numeroCivico;
     }
-    public String getCitta() {
-        return citta;
-    }
-    public int getCap() {
-        return CAP;
-    }
+    public String getCitta() { return citta; }
+    public int getCap() { return CAP; }
 
     @Override
     public String toString() {

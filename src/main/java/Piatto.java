@@ -9,9 +9,7 @@ public class Piatto {
         this.prezzo=prezzo;
     }
 
-    public StringBuilder getDescrizione() {
-        return descrizione;
-    }
+    public StringBuilder getDescrizione() { return descrizione; }
     public void setDescrizione(StringBuilder descrizione) {
         this.descrizione = descrizione;
     }
@@ -21,9 +19,7 @@ public class Piatto {
     public void setNomePiatto(String nomePiatto) {
         this.nomePiatto = nomePiatto;
     }
-    public int getPrezzo() {
-        return prezzo;
-    }
+    public int getPrezzo() { return prezzo; }
     public void setPrezzo(int prezzo) {
         this.prezzo = prezzo;
     }
