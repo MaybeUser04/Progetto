@@ -34,7 +34,7 @@ public class FormOrdinazione {
     private JLabel lblPrezzo;
     private JPanel IndirizzoJPanel;
 
-    private Navigator navigator;
+    private final Navigator navigator;
 
 
     /**
